@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAX & BAB Studio | Développement & Production</title>
+    <style>
+        /* Responsive Mobile Styles */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 15px;
+                gap: 15px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                padding: 10px;
+                width: 100%;
+            }
+
+            nav a {
+                margin: 0 5px;
+                font-size: 0.75rem;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr !important;
+                text-align: center;
+                padding: 0 15px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem !important;
+            }
+
+            .hero-visual {
+                display: none;
+                /* Hide floating cards on mobile for cleaner look */
+            }
+
+            .portfolio-filters {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            .filter-btn {
+                font-size: 0.8rem;
+                padding: 8px 16px;
+                flex: 1 1 30%;
+                /* Buttons take up space evenly */
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                /* Stack cards vertically */
+                gap: 20px;
+            }
+
+            .project-item.pricing-card {
+                margin-bottom: 20px;
+            }
+
+            .pricing-header h3 {
+                font-size: 1.2rem;
+            }
+
+            .timeline::after {
+                left: 20px;
+                /* Adjust timeline line */
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 50px;
+                padding-right: 20px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-item:nth-child(even) .timeline-content {
+                text-align: left;
+                /* Reset alignment */
+            }
+
+            .timeline-number {
+                left: 0 !important;
+                right: auto !important;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-products.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="TAX & BAB Logo" class="logo-img">
+            <span class="brand-name">TAX & BAB STUDIO</span>
+        </div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Nos Créations</a>
+            <a href="#partners">Partenaires</a>
+        </nav>
+        <button class="auth-btn" onclick="window.open('https://discord.gg/votre-lien-ici', '_blank')">
+            <i class="fab fa-discord"></i> REJOINDRE DISCORD
+        </button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <h1>L'ALLIANCE DU CODE <span class="text-highlight">ET DE L'IMAGE</span></h1>
+                    <p>Une synergie unique entre développement script ingénieux et production vidéo cinématographique.
+                        TAX & BAB Studio propulse votre serveur au sommet.</p>
+                    <div class="hero-buttons">
+                        <a href="#portfolio" class="btn-primary">EXPLORER</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <!-- Floating abstract cards representing code and video -->
+                    <div class="floating-card card-1">
+                        <h4><i class="fas fa-code"></i> DÉVELOPPEMENT</h4>
+                        <p>Scripts FiveM optimisés, mappings exclusifs et interfaces web réactives.</p>
+                    </div>
+                    <div class="floating-card card-2">
+                        <h4><i class="fas fa-video"></i> PRODUCTION</h4>
+                        <p>Trailers 4K, montages dynamiques et identité visuelle complète.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+            <div class="section-title">
+                <h2>NOS SERVICES</h2>
+                <div class="line"></div>
+                <p style="margin-top: 15px; color: var(--text-muted); text-align: center;">Une expertise complète
+                    divisée en deux pôles d'excellence</p>
+            </div>
+
+            <!-- PÔLE CRÉATIF -->
+            <div class="pole-container">
+                <h3 class="pole-title"><i class="fas fa-palette"></i> STUDIO CRÉATIF</h3>
+                <div class="services-grid three-col">
+                    <div class="service-card">
+                        <i class="fas fa-video service-icon"></i>
+                        <h3>VIDÉO & MONTAGE</h3>
+                        <p>Trailers cinématographiques (Rockstar Editor), clips promotionnels, montage dynamique et
+                            effets visuels avancés (VFX).</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-microphone-alt service-icon"></i>
+                        <h3>AUDIO & SOUND</h3>
+                        <p>Enregistrement de voix-off professionnelles, sound design sur mesure, mixage audio et
+                            création d'ambiances sonores immersives.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-camera service-icon"></i>
+                        <h3>PHOTO & GRAPHISME</h3>
+                        <p>Identité visuelle complète, création de logos, bannières, miniatures YouTube et retouche
+                            photo haute qualité.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PÔLE TECHNIQUE -->
+            <div class="pole-container technical-pole">
+                <h3 class="pole-title"><i class="fas fa-code"></i> STUDIO DÉVELOPPEMENT</h3>
+                <div class="services-grid three-col">
+                    <div class="service-card">
+                        <i class="fas fa-laptop-code service-icon"></i>
+                        <h3>SCRIPTS FIVEM</h3>
+                        <p>Développement Lua sur mesure, optimisation de ressources, création de frameworks complets et
+                            systèmes exclusifs.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-map-marked-alt service-icon"></i>
+                        <h3>MAPPING 3D</h3>
+                        <p>Création de MLOs (intérieurs), modification de textures, aménagement de zones (Roleplay) et
+                            optimisation 3D.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-globe service-icon"></i>
+                        <h3>SITES INTERNET</h3>
+                        <p>Création de sites vitrines, boutiques en ligne (Tebex custom), panels d'administration et
+                            dashboards liés à votre serveur.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio-section">
+            <div class="section-title">
+                <h2>NOS RÉALISATIONS</h2>
+                <div class="line"></div>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="portfolio-filters">
+                <div class="filter-group">
+                    <button class="filter-btn" data-filter="video">VIDÉO</button>
+                    <button class="filter-btn" data-filter="audio">AUDIO</button>
+                    <button class="filter-btn" data-filter="logo">LOGO</button>
+                </div>
+                <div class="filter-divider">|</div>
+                <div class="filter-group">
+                    <button class="filter-btn" data-filter="script">SCRIPT</button>
+                    <button class="filter-btn" data-filter="mapping">MAPPING</button>
+                    <button class="filter-btn active" data-filter="web">WEB</button>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1: Script
+                <div class="project-item" data-category="script" onclick="window.location.href='detail-script.html'"
+                    style="cursor: pointer;">
+                    <div class="project-thumb"
+                        style="background-image: url('https://picsum.photos/400/300?random=10');"></div>
+                    <div class="project-details">
+                        <span class="project-cat">SCRIPT LUA</span>
+                        <h3 class="project-title">Système Police Avancé</h3>
+                        <span class="project-price">45.00 €</span>
+                    </div>
+                </div> -->
+                <!-- Project 2: Mapping
+                <div class="project-item" data-category="mapping" style="cursor: pointer;">
+                    <div class="project-thumb"
+                        style="background-image: url('https://picsum.photos/400/300?random=11');"></div>
+                    <div class="project-details">
+                        <span class="project-cat">MAPPING</span>
+                        <h3 class="project-title">QG Cartel Sud</h3>
+                        <span class="project-price">30.00 €</span>
+                    </div>
+                </div> -->
+
+                <!-- Project 4: Web - Site 1 Page -->
+                <div class="project-item pricing-card" data-category="web" style="padding: 30px;">
+                    <div class="pricing-header">
+                        <span class="badge badge-green project-cat">WEB BASIC</span>
+                        <h3 class="project-title">SITE 1 PAGE</h3>
+                        <div class="price">69€</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 1 Page Scroll Complète</li>
+                        <li><i class="fas fa-check"></i> Présentation Serveur/Projet</li>
+                        <li><i class="fas fa-check"></i> Bouton Discord & Contact</li>
+                        <li><i class="fas fa-check"></i> Design Personnalisé</li>
+                        <li><i class="fas fa-mobile-alt"></i> Responsive Mobile</li>
+                        <li><i class="fas fa-redo"></i> 1 Révision Incluse</li>
+                        <li><i class="fas fa-shield-alt"></i> 15 Jours Support Léger</li>
+                    </ul>
+                    <div class="pricing-delay"><i class="far fa-clock"></i> Délai : 1–4 jours</div>
+                    <button class="order-btn" style="width: 100%; margin-top: 20px;"
+                        onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')">COMMANDER</button>
+                </div>
+
+                <!-- Project 4: Web - Site 3 Pages -->
+                <div class="project-item pricing-card" data-category="web"
+                    style="padding: 30px; border-color: #3b82f6;">
+                    <div class="pricing-header">
+                        <span class="badge badge-blue project-cat">WEB STANDARD</span>
+                        <h3 class="project-title">SITE 3 PAGES</h3>
+                        <div class="price" style="color: #3b82f6;">100€</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check" style="color: #3b82f6;"></i> Accueil, Services, Règlement</li>
+                        <li><i class="fas fa-check" style="color: #3b82f6;"></i> Page Contact Dédiée</li>
+                        <li><i class="fas fa-check" style="color: #3b82f6;"></i> Design Personnalisé</li>
+                        <li><i class="fas fa-mobile-alt" style="color: #3b82f6;"></i> Responsive Mobile</li>
+                        <li><i class="fas fa-redo" style="color: #3b82f6;"></i> 2 Révisions Incluses</li>
+                        <li><i class="fas fa-shield-alt" style="color: #3b82f6;"></i> 30 Jours Support Léger</li>
+                    </ul>
+                    <div class="pricing-delay"><i class="far fa-clock"></i> Délai : 2–4 jours</div>
+                    <button class="order-btn" style="width: 100%; margin-top: 20px; background: #3b82f6;"
+                        onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')">COMMANDER</button>
+                </div>
+
+                <!-- Project 4: Web - Site RP Stylé -->
+                <div class="project-item pricing-card" data-category="web"
+                    style="padding: 30px; border-color: #f59e0b;">
+                    <div class="pricing-header">
+                        <span class="badge badge-yellow project-cat">WEB PREMIUM</span>
+                        <h3 class="project-title">SITE RP STYLÉ</h3>
+                        <div class="price" style="color: #f59e0b;">140€</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check" style="color: #f59e0b;"></i> 4–5 Pages Complètes</li>
+                        <li><i class="fas fa-images" style="color: #f59e0b;"></i> Galerie Images & Trailer</li>
+                        <li><i class="fas fa-link" style="color: #f59e0b;"></i> Intégration Bouton Rejoindre</li>
+                        <li><i class="fas fa-paint-brush" style="color: #f59e0b;"></i> Design Haut de Gamme</li>
+                        <li><i class="fas fa-redo" style="color: #f59e0b;"></i> 2 Révisions Incluses</li>
+                        <li><i class="fas fa-shield-alt" style="color: #f59e0b;"></i> 30 Jours Support Léger</li>
+                    </ul>
+                    <div class="pricing-delay"><i class="far fa-clock"></i> Délai : 2–4 jours</div>
+                    <button class="order-btn" style="width: 100%; margin-top: 20px; background: #f59e0b;"
+                        onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')">COMMANDER</button>
+                </div>
+
+                <!-- Panel Pricing - Simple -->
+                <div class="project-item pricing-card" data-category="web" style="padding: 30px;">
+                    <div class="pricing-header">
+                        <span class="badge badge-blue project-cat">PANEL START</span>
+                        <h3 class="project-title">PANEL SIMPLE</h3>
+                        <div class="price" style="color: #3b82f6;">160€</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-key"></i> Connexion Admin Simple</li>
+                        <li><i class="fas fa-database"></i> Gestion Contenu (CRUD)</li>
+                        <li><i class="fas fa-server"></i> Base de Données MySQL</li>
+                        <li><i class="fas fa-redo"></i> 1 Révision Incluse</li>
+                        <li><i class="fas fa-headset"></i> 15 Jours Support Technique</li>
+                    </ul>
+                    <div class="pricing-delay"><i class="far fa-clock"></i> Délai : 4–6 jours</div>
+                    <button class="order-btn" style="width: 100%; margin-top: 20px; background: #3b82f6;"
+                        onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')">COMMANDER</button>
+                </div>
+
+                <!-- Panel Pricing - Avancé -->
+                <div class="project-item pricing-card" data-category="web"
+                    style="padding: 30px; border-color: #f59e0b;">
+                    <div class="pricing-header">
+                        <span class="badge badge-yellow project-cat">PANEL ADVANCED</span>
+                        <h3 class="project-title">PANEL AVANCÉ</h3>
+                        <div class="price" style="color: #f59e0b;">209€</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-lock" style="color: #f59e0b;"></i> Connexion Sécurisée</li>
+                        <li><i class="fas fa-users-cog" style="color: #f59e0b;"></i> Gestion Utilisateurs & Rôles</li>
+                        <li><i class="fas fa-tachometer-alt" style="color: #f59e0b;"></i> Dashboard Basique</li>
+                        <li><i class="fas fa-cogs" style="color: #f59e0b;"></i> CRUD Avancé</li>
+                        <li><i class="fas fa-headset" style="color: #f59e0b;"></i> 30 Jours Support Technique</li>
+                    </ul>
+                    <div class="pricing-delay"><i class="far fa-clock"></i> Délai : 5–7 jours</div>
+                    <button class="order-btn" style="width: 100%; margin-top: 20px; background: #f59e0b;"
+                        onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')">COMMANDER</button>
+                </div>
+
+                <!-- Panel Pricing - Complexe -->
+                <div class="project-item pricing-card" data-category="web"
+                    style="padding: 30px; border-color: #ef4444;">
+                    <div class="pricing-header">
+                        <span class="badge badge-red project-cat">PANEL EXPERT</span>
+                        <h3 class="project-title">SYSTÈME COMPLEXE</h3>
+                        <div class="price" style="color: #ef4444;">350€</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-chart-line" style="color: #ef4444;"></i> Dashboard 100% Custom</li>
+                        <li><i class="fas fa-project-diagram" style="color: #ef4444;"></i> Gestion Complète BDD</li>
+                        <li><i class="fas fa-user-shield" style="color: #ef4444;"></i> Multi-rôles & Permissions</li>
+                        <li><i class="fas fa-puzzle-piece" style="color: #ef4444;"></i> Modules Dynamiques</li>
+                        <li><i class="fas fa-layer-group" style="color: #ef4444;"></i> Structure Évolutive</li>
+                        <li><i class="fas fa-headset" style="color: #ef4444;"></i> 30 Jours Support Technique</li>
+                    </ul>
+                    <div class="pricing-delay"><i class="far fa-clock"></i> Délai : 5–10 jours</div>
+                    <button class="order-btn" style="width: 100%; margin-top: 20px; background: #ef4444;"
+                        onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')">COMMANDER</button>
+                </div>
+
+                <!-- Video Pricing - 15s -->
+                <div class="project-item pricing-card" data-category="video" style="padding: 30px; display: none;">
+                    <div class="pricing-header">
+                        <span class="badge badge-green project-cat">VIDEO BASIC</span>
+                        <h3 class="project-title">VIDÉO COURTE</h3>
+                        <div class="price">5€</div>
+                        <span style="color: #999; font-size: 0.9rem;">15 SECONDES</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Montage simple</li>
+                        <li><i class="fas fa-closed-captioning"></i> Sous-titres dynamiques</li>
+                        <li><i class="fas fa-music"></i> Musique libre de droit</li>
+                        <li><i class="fas fa-mobile-alt"></i> Format vertical (9:16)</li>
+                    </ul>
+                    <button class="order-btn" style="width: 100%; margin-top: 20px;"
+                        onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')">COMMANDER</button>
+                </div>
+
+                <!-- Video Pricing - 30s -->
+
+                <div class="project-item pricing-card" data-category="video"
+                    style="padding: 30px; border-color: #3b82f6; display: none;">
+                    <div class="pricing-header">
+                        <span class="badge badge-blue project-cat">VIDEO STANDARD</span>
+                        <h3 class="project-title">VIDÉO - 30s</h3>
+                        <div class="price" style="color: #3b82f6;">10€</div>
+                        <span style="color: #999; font-size: 0.9rem;">30 SECONDES</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check" style="color: #3b82f6;"></i> Montage dynamique</li>
+                        <li><i class="fas fa-closed-captioning" style="color: #3b82f6;"></i> Sous-titres animés
+                        </li>
+                        <li><i class="fas fa-magic" style="color: #3b82f6;"></i> Effets & transitions</li>
+                        <li><i class="fas fa-music" style="color: #3b82f6;"></i> Musique libre de droit</li>
+                        <li><i class="fas fa-redo" style="color: #3b82f6;"></i> 1 modification incluse</li>
+                    </ul>
+                    <button class="order-btn" style="width: 100%; margin-top: 20px; background: #3b82f6;"
+                        onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')">COMMANDER</button>
+                </div>
+
+                <!-- Video Pricing - 45s -->
+
+                <div class="project-item pricing-card" data-category="video"
+                    style="padding: 30px; border-color: #f59e0b; display: none;">
+                    <div class="pricing-header">
+                        <span class="badge badge-yellow project-cat">VIDEO ADVANCED</span>
+                        <h3 class="project-title">VIDÉO - 45s</h3>
+                        <div class="price" style="color: #f59e0b;">20€</div>
+                        <span style="color: #999; font-size: 0.9rem;">45 SECONDES</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-star" style="color: #f59e0b;"></i> Montage avancé</li>
+                        <li><i class="fas fa-volume-up" style="color: #f59e0b;"></i> Sound design léger</li>
+                        <li><i class="fas fa-film" style="color: #f59e0b;"></i> Effets visuels + transitions
+                        </li>
+                        <li><i class="fas fa-font" style="color: #f59e0b;"></i> Sous-titres stylisés</li>
+                        <li><i class="fas fa-redo" style="color: #f59e0b;"></i> 2 modifications incluses</li>
+                    </ul>
+                    <button class="order-btn" style="width: 100%; margin-top: 20px; background: #f59e0b;"
+                        onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')">COMMANDER</button>
+                </div>
+
+                <!-- Video Pricing - 1 Min -->
+
+                <div class="project-item pricing-card" data-category="video"
+                    style="padding: 30px; border-color: #ef4444; display: none;">
+                    <div class="pricing-header">
+                        <span class="badge badge-red project-cat">VIDEO PREMIUM</span>
+                        <h3 class="project-title">VIDÉO - 1 MIN</h3>
+                        <div class="price" style="color: #ef4444;">30€</div>
+                        <span style="color: #999; font-size: 0.9rem;">60 SECONDES</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-crown" style="color: #ef4444;"></i> Montage premium</li>
+                        <li><i class="fas fa-volume-high" style="color: #ef4444;"></i> Sound design complet</li>
+                        <li><i class="fas fa-wand-magic-sparkles" style="color: #ef4444;"></i> Effets visuels
+                            travaillés</li>
+                        <li><i class="fas fa-closed-captioning" style="color: #ef4444;"></i> Sous-titres pro
+                        </li>
+                        <li><i class="fas fa-rocket" style="color: #ef4444;"></i> Optimisation Algo</li>
+                        <li><i class="fas fa-redo" style="color: #ef4444;"></i> 2 modifications incluses</li>
+                    </ul>
+                    <button class="order-btn" style="width: 100%; margin-top: 20px; background: #ef4444;"
+                        onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')">COMMANDER</button>
+                </div>
+
+                <!-- Project 5: Audio -->
+                <!-- AUDIO PRICING -->
+                <!-- Voix Off Courte -->
+                <div class="project-item pricing-card" data-category="audio" style="padding: 30px; display: none;">
+                    <div class="pricing-header">
+                        <span class="badge badge-green project-cat">AUDIO START</span>
+                        <h3 class="project-title">VOIX OFF COURTE</h3>
+                        <div class="price">5€</div>
+                        <span style="color: #999; font-size: 0.9rem;">~30 SECONDES</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Jusqu’à 30 secondes</li>
+                        <li><i class="fas fa-microphone"></i> 1 voix (FR ou EN)</li>
+                        <li><i class="fas fa-wave-square"></i> Nettoyage audio</li>
+                        <li><i class="fas fa-file-audio"></i> Format WAV / MP3</li>
+                        <li><i class="fas fa-redo"></i> 1 modification</li>
+                    </ul>
+                    <button class="order-btn" style="width: 100%; margin-top: 20px;"
+                        onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')">COMMANDER</button>
+                </div>
+
+                <!-- Voix Off Standard -->
+                <div class="project-item pricing-card" data-category="audio"
+                    style="padding: 30px; display: none; border-color: #3b82f6;">
+                    <div class="pricing-header">
+                        <span class="badge badge-blue project-cat">AUDIO STANDARD</span>
+                        <h3 class="project-title">VOIX OFF STANDARD</h3>
+                        <div class="price" style="color: #3b82f6;">10€</div>
+                        <span style="color: #999; font-size: 0.9rem;">~60 SECONDES</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Jusqu’à 60 secondes</li>
+                        <li><i class="fas fa-masks-theater"></i> Ton au choix (Sérieux/RP...)</li>
+                        <li><i class="fas fa-sliders"></i> Mix léger (EQ + Volume)</li>
+                        <li><i class="fas fa-redo"></i> 2 modifications</li>
+                    </ul>
+                    <button class="order-btn" style="width: 100%; margin-top: 20px; background: #3b82f6;"
+                        onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')">COMMANDER</button>
+                </div>
+
+                <!-- Voix Off Premium -->
+                <div class="project-item pricing-card" data-category="audio"
+                    style="padding: 30px; display: none; border-color: #8b5cf6;">
+                    <div class="pricing-header">
+                        <span class="badge project-cat"
+                            style="background: rgba(139, 92, 246, 0.2); color: #8b5cf6;">AUDIO PRO</span>
+                        <h3 class="project-title">VOIX OFF PREMIUM</h3>
+                        <div class="price" style="color: #8b5cf6;">20€</div>
+                        <span style="color: #999; font-size: 0.9rem;">~2 MINUTES</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Jusqu’à 2 minutes</li>
+                        <li><i class="fas fa-star"></i> Ton personnalisé</li>
+                        <li><i class="fas fa-sliders-h"></i> Mix travaillé (Mastering léger)</li>
+                        <li><i class="fas fa-music"></i> Ambiance sonore (option)</li>
+                        <li><i class="fas fa-redo"></i> 2 modifications</li>
+                    </ul>
+                    <button class="order-btn" style="width: 100%; margin-top: 20px; background: #8b5cf6;"
+                        onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')">COMMANDER</button>
+                </div>
+
+                <!-- Voix Off Trailer -->
+                <div class="project-item pricing-card" data-category="audio"
+                    style="padding: 30px; display: none; border-color: #ef4444;">
+                    <div class="pricing-header">
+                        <span class="badge badge-red project-cat">AUDIO ULTIME</span>
+                        <h3 class="project-title">VOIX OFF TRAILER</h3>
+                        <div class="price" style="color: #ef4444;">30€</div>
+                        <span style="color: #999; font-size: 0.9rem;">POUR TRAILER</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-pen-nib"></i> Script optimisé</li>
+                        <li><i class="fas fa-film"></i> Voix cinématique</li>
+                        <li><i class="fas fa-volume-high"></i> Mix complet & Master final</li>
+                        <li><i class="fas fa-bolt" style="color: #ef4444;"></i> Priorité livraison</li>
+                    </ul>
+                    <button class="order-btn" style="width: 100%; margin-top: 20px; background: #ef4444;"
+                        onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')">COMMANDER</button>
+                </div>
+
+                <!-- Audio Options -->
+                <div class="project-item pricing-card" data-category="audio" style="padding: 30px; display: none;">
+                    <div class="pricing-header">
+                        <span class="badge project-cat" style="background: #333; color: #fff;">OPTIONS</span>
+                        <h3 class="project-title">EXTRAS AUDIO</h3>
+                        <div class="price" style="font-size: 1.5rem; color: #fff;">À LA CARTE</div>
+                    </div>
+                    <ul class="pricing-features" style="font-size: 0.9rem;">
+                        <li style="justify-content: space-between;">Accent spécifique <span
+                                style="font-weight:bold; color:var(--accent-color);">+3€</span></li>
+                        <li style="justify-content: space-between;">Version TikTok <span
+                                style="font-weight:bold; color:var(--accent-color);">+3€</span></li>
+                        <li style="justify-content: space-between;">Sound Design <span
+                                style="font-weight:bold; color:var(--accent-color);">+5€</span></li>
+                        <li style="justify-content: space-between;">Modif supp. <span
+                                style="font-weight:bold; color:var(--accent-color);">+3€</span></li>
+                        <li style="justify-content: space-between;">Livraison Prio <span
+                                style="font-weight:bold; color:var(--accent-color);">+5€</span></li>
+                    </ul>
+                    <button class="order-btn" style="width: 100%; margin-top: 10px; font-size: 0.9rem;"
+                        onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')">COMMANDER</button>
+                </div>
+                <!-- PACKS -->
+                <!-- Pack Logo -->
+                <div class="project-item pricing-card" data-category="logo"
+                    style="padding: 0; padding-bottom: 20px; display: none;">
+                    <div class="project-thumb"
+                        style="background-image: url('https://cdn.discordapp.com/attachments/1232671549341831289/1473764093273047150/03a13414-b90c-4e31-84bc-58382979ed48.png?ex=69976545&is=699613c5&hm=f2593a053c1ae9ef6f5bf8450c485fa21c86ed4d765441c23427543437e6a2ea&'); height: 200px;">
+                    </div>
+                    <div style="padding: 0 20px;">
+                        <div class="pricing-header" style="border-bottom: none; padding-bottom: 0;">
+                            <span class="badge badge-green project-cat">PACK START</span>
+                            <h3 class="project-title">PACK LOGO</h3>
+                            <div class="price">10€</div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Logo FiveM</li>
+                            <li><i class="fas fa-check"></i> Logo Discord</li>
+                            <li><i class="fas fa-check"></i> Transparent</li>
+                            <li><i class="fas fa-redo"></i> 1 modification</li>
+                        </ul>
+                        <button class="order-btn" style="width: 100%; margin-top: 20px;"
+                            onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')">COMMANDER</button>
+                    </div>
+                </div>
+
+                <!-- Pack FiveM -->
+                <div class="project-item pricing-card" data-category="logo"
+                    style="padding: 0; padding-bottom: 20px; display: none; border-color: #3b82f6;">
+                    <div class="project-thumb"
+                        style="background-image: url('https://cdn.discordapp.com/attachments/1232671549341831289/1473764093273047150/03a13414-b90c-4e31-84bc-58382979ed48.png?ex=69976545&is=699613c5&hm=f2593a053c1ae9ef6f5bf8450c485fa21c86ed4d765441c23427543437e6a2ea&'); height: 200px;">
+                    </div>
+                    <div style="padding: 0 20px;">
+                        <div class="pricing-header" style="border-bottom: none; padding-bottom: 0;">
+                            <span class="badge badge-blue project-cat">PACK FIVEM</span>
+                            <h3 class="project-title">PACK FIVEM</h3>
+                            <div class="price" style="color: #3b82f6;">15€</div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Logo FiveM + Transparent</li>
+                            <li><i class="fas fa-check"></i> Bannière FiveM</li>
+                            <li><i class="fas fa-check"></i> Bannière Connexion</li>
+                            <li><i class="fas fa-check"></i> Loading sans animation</li>
+                            <li><i class="fas fa-check"></i> Bannière F5</li>
+                        </ul>
+                        <button class="order-btn" style="width: 100%; margin-top: 20px; background: #3b82f6;"
+                            onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')">COMMANDER</button>
+                    </div>
+                </div>
+
+                <!-- Pack Discord -->
+                <div class="project-item pricing-card" data-category="logo"
+                    style="padding: 0; padding-bottom: 20px; display: none; border-color: #8b5cf6;">
+                    <div class="project-thumb"
+                        style="background-image: url('https://cdn.discordapp.com/attachments/1232671549341831289/1473764093273047150/03a13414-b90c-4e31-84bc-58382979ed48.png?ex=69976545&is=699613c5&hm=f2593a053c1ae9ef6f5bf8450c485fa21c86ed4d765441c23427543437e6a2ea&'); height: 200px;">
+                    </div>
+                    <div style="padding: 0 20px;">
+                        <div class="pricing-header" style="border-bottom: none; padding-bottom: 0;">
+                            <span class="badge project-cat"
+                                style="background: rgba(139, 92, 246, 0.2); color: #8b5cf6;">PACK DISCORD</span>
+                            <h3 class="project-title">PACK DISCORD</h3>
+                            <div class="price" style="color: #8b5cf6;">15€</div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Logo Discord</li>
+                            <li><i class="fas fa-check"></i> Bannière Discord</li>
+                            <li><i class="fas fa-check"></i> Bannière invitation</li>
+                            <li><i class="fas fa-check"></i> Bannière profil</li>
+                        </ul>
+                        <button class="order-btn" style="width: 100%; margin-top: 20px; background: #8b5cf6;"
+                            onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')">COMMANDER</button>
+                    </div>
+                </div>
+
+                <!-- Pack Serveur -->
+                <div class="project-item pricing-card" data-category="logo"
+                    style="padding: 0; padding-bottom: 20px; display: none; border-color: #f59e0b;">
+                    <div class="project-thumb"
+                        style="background-image: url('https://cdn.discordapp.com/attachments/1232671549341831289/1473764093273047150/03a13414-b90c-4e31-84bc-58382979ed48.png?ex=69976545&is=699613c5&hm=f2593a053c1ae9ef6f5bf8450c485fa21c86ed4d765441c23427543437e6a2ea&'); height: 200px;">
+                    </div>
+                    <div style="padding: 0 20px;">
+                        <div class="pricing-header" style="border-bottom: none; padding-bottom: 0;">
+                            <span class="badge badge-yellow project-cat">PACK SERVEUR</span>
+                            <h3 class="project-title">PACK SERVEUR</h3>
+                            <div class="price" style="color: #f59e0b;">25€</div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-star" style="color: #f59e0b;"></i> Pack FiveM complet</li>
+                            <li><i class="fas fa-star" style="color: #f59e0b;"></i> Pack Discord complet</li>
+                            <li><i class="fas fa-redo" style="color: #f59e0b;"></i> 2 modifications</li>
+                        </ul>
+                        <button class="order-btn" style="width: 100%; margin-top: 20px; background: #f59e0b;"
+                            onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')">COMMANDER</button>
+                    </div>
+                </div>
+
+                <!-- Pack Pro -->
+                <div class="project-item pricing-card" data-category="logo"
+                    style="padding: 0; padding-bottom: 20px; display: none; border-color: #ef4444;">
+                    <div class="project-thumb"
+                        style="background-image: url('https://cdn.discordapp.com/attachments/1232671549341831289/1473764093273047150/03a13414-b90c-4e31-84bc-58382979ed48.png?ex=69976545&is=699613c5&hm=f2593a053c1ae9ef6f5bf8450c485fa21c86ed4d765441c23427543437e6a2ea&'); height: 200px;">
+                    </div>
+                    <div style="padding: 0 20px;">
+                        <div class="pricing-header" style="border-bottom: none; padding-bottom: 0;">
+                            <span class="badge badge-red project-cat">PACK ULTIME</span>
+                            <h3 class="project-title">PACK PRO</h3>
+                            <div class="price" style="color: #ef4444;">35€</div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-crown" style="color: #ef4444;"></i> Logo Premium + Loading Custom</li>
+                            <li><i class="fas fa-check"></i> Pack FiveM Complet</li>
+                            <li><i class="fas fa-check"></i> Pack Discord Complet</li>
+                            <li><i class="fas fa-redo"></i> 3 modifications</li>
+                            <li><i class="fas fa-bolt" style="color: #ef4444;"></i> Priorité livraison</li>
+                        </ul>
+                        <button class="order-btn" style="width: 100%; margin-top: 20px; background: #ef4444;"
+                            onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')">COMMANDER</button>
+                    </div>
+                </div>
+
+                <!-- UNIT PRICES -->
+                <!-- Unité: Logos -->
+                <div class="project-item pricing-card" data-category="logo"
+                    style="padding: 0; padding-bottom: 20px; display: none;">
+                    <div class="project-thumb"
+                        style="background-image: url('https://cdn.discordapp.com/attachments/1232671549341831289/1473764093273047150/03a13414-b90c-4e31-84bc-58382979ed48.png?ex=69976545&is=699613c5&hm=f2593a053c1ae9ef6f5bf8450c485fa21c86ed4d765441c23427543437e6a2ea&'); height: 150px;">
+                    </div>
+                    <div style="padding: 0 20px;">
+                        <div class="pricing-header" style="border-bottom: none; padding-bottom: 0;">
+                            <span class="badge project-cat" style="background: #333; color: #fff;">UNITÉ</span>
+                            <h3 class="project-title">LOGOS</h3>
+                            <div class="price" style="font-size: 1.5rem; color: #fff;">À LA CARTE</div>
+                        </div>
+                        <ul class="pricing-features" style="font-size: 0.9rem;">
+                            <li style="justify-content: space-between;">Logo Basic <span
+                                    style="font-weight:bold; color:var(--accent-color);">4€</span></li>
+                            <li style="justify-content: space-between;">Logo Premium <span
+                                    style="font-weight:bold; color:var(--accent-color);">10€</span></li>
+                            <li style="justify-content: space-between;">Logo animé <span
+                                    style="font-weight:bold; color:var(--accent-color);">+5€</span></li>
+                            <li style="justify-content: space-between;">Modif supp <span
+                                    style="font-weight:bold; color:var(--accent-color);">+3€</span></li>
+                        </ul>
+                        <button class="order-btn" style="width: 100%; margin-top: 10px; font-size: 0.9rem;"
+                            onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')">COMMANDER</button>
+                    </div>
+                </div>
+
+                <!-- Unité: FiveM -->
+                <div class="project-item pricing-card" data-category="logo"
+                    style="padding: 0; padding-bottom: 20px; display: none;">
+                    <div class="project-thumb"
+                        style="background-image: url('https://cdn.discordapp.com/attachments/1232671549341831289/1473764093273047150/03a13414-b90c-4e31-84bc-58382979ed48.png?ex=69976545&is=699613c5&hm=f2593a053c1ae9ef6f5bf8450c485fa21c86ed4d765441c23427543437e6a2ea&'); height: 150px;">
+                    </div>
+                    <div style="padding: 0 20px;">
+                        <div class="pricing-header" style="border-bottom: none; padding-bottom: 0;">
+                            <span class="badge project-cat" style="background: #333; color: #fff;">UNITÉ</span>
+                            <h3 class="project-title">FIVEM</h3>
+                            <div class="price" style="font-size: 1.5rem; color: #fff;">À LA CARTE</div>
+                        </div>
+                        <ul class="pricing-features" style="font-size: 0.9rem;">
+                            <li style="justify-content: space-between;">Bannière (Tout type) <span
+                                    style="font-weight:bold; color:var(--accent-color);">4€</span></li>
+                            <li style="justify-content: space-between;">Loading (Fixe) <span
+                                    style="font-weight:bold; color:var(--accent-color);">5€</span></li>
+                            <li style="justify-content: space-between;">Loading (Animé) <span
+                                    style="font-weight:bold; color:var(--accent-color);">8€</span></li>
+                        </ul>
+                        <button class="order-btn" style="width: 100%; margin-top: 10px; font-size: 0.9rem;"
+                            onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')">COMMANDER</button>
+                    </div>
+                </div>
+
+                <!-- Unité: Discord -->
+                <div class="project-item pricing-card" data-category="logo"
+                    style="padding: 0; padding-bottom: 20px; display: none;">
+                    <div class="project-thumb"
+                        style="background-image: url('https://cdn.discordapp.com/attachments/1232671549341831289/1473764093273047150/03a13414-b90c-4e31-84bc-58382979ed48.png?ex=69976545&is=699613c5&hm=f2593a053c1ae9ef6f5bf8450c485fa21c86ed4d765441c23427543437e6a2ea&'); height: 150px;">
+                    </div>
+                    <div style="padding: 0 20px;">
+                        <div class="pricing-header" style="border-bottom: none; padding-bottom: 0;">
+                            <span class="badge project-cat" style="background: #333; color: #fff;">UNITÉ</span>
+                            <h3 class="project-title">DISCORD</h3>
+                            <div class="price" style="font-size: 1.5rem; color: #fff;">À LA CARTE</div>
+                        </div>
+                        <ul class="pricing-features" style="font-size: 0.9rem;">
+                            <li style="justify-content: space-between;">Logo / Bannière <span
+                                    style="font-weight:bold; color:var(--accent-color);">4€</span></li>
+                            <li style="justify-content: space-between;">Invitation / Profil <span
+                                    style="font-weight:bold; color:var(--accent-color);">4€</span></li>
+                            <li style="justify-content: space-between;">Template Embeds <span
+                                    style="font-weight:bold; color:var(--accent-color);">6€</span></li>
+                        </ul>
+                        <button class="order-btn" style="width: 100%; margin-top: 10px; font-size: 0.9rem;"
+                            onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')">COMMANDER</button>
+                    </div>
+                </div>
+
+                <!-- Unité: Extras -->
+                <div class="project-item pricing-card" data-category="logo"
+                    style="padding: 0; padding-bottom: 20px; display: none;">
+                    <div class="project-thumb"
+                        style="background-image: url('https://cdn.discordapp.com/attachments/1232671549341831289/1473764093273047150/03a13414-b90c-4e31-84bc-58382979ed48.png?ex=69976545&is=699613c5&hm=f2593a053c1ae9ef6f5bf8450c485fa21c86ed4d765441c23427543437e6a2ea&'); height: 150px;">
+                    </div>
+                    <div style="padding: 0 20px;">
+                        <div class="pricing-header" style="border-bottom: none; padding-bottom: 0;">
+                            <span class="badge project-cat" style="background: #333; color: #fff;">UNITÉ</span>
+                            <h3 class="project-title">EXTRAS</h3>
+                            <div class="price" style="font-size: 1.5rem; color: #fff;">À LA CARTE</div>
+                        </div>
+                        <ul class="pricing-features" style="font-size: 0.9rem;">
+                            <li style="justify-content: space-between;">Overlay <span
+                                    style="font-weight:bold; color:var(--accent-color);">3€</span></li>
+                            <li style="justify-content: space-between;">Affiche <span
+                                    style="font-weight:bold; color:var(--accent-color);">5€</span></li>
+                            <li style="justify-content: space-between;">Team Flag <span
+                                    style="font-weight:bold; color:var(--accent-color);">1€</span></li>
+                            <li style="justify-content: space-between;">Priorité <span
+                                    style="font-weight:bold; color:var(--accent-color);">4€</span></li>
+                        </ul>
+                        <button class="order-btn" style="width: 100%; margin-top: 10px; font-size: 0.9rem;"
+                            onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')">COMMANDER</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- MODÈLE MAPPING (À COPIER) -->
+            <!--
+                <div class="project-item pricing-card" data-category="mapping" style="padding: 0; padding-bottom: 20px; display: none;">
+                    <div class="project-thumb" style="background-image: url('URL_DE_VOTRE_IMAGE_ICI'); height: 200px;"></div>
+                    
+                    <div style="padding: 0 20px;">
+                        <div class="pricing-header" style="border-bottom: none; padding-bottom: 0;">
+                            <span class="badge badge-purple project-cat">MAPPING</span>
+                            <h3 class="project-title">NOM DU MAPPING</h3>
+                            <div class="price">15€</div>
+                        </div>
+                        
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-map-marker-alt"></i> Localisation : Legion Square</li>
+                            <li><i class="fas fa-cube"></i> Nombre de props : ~50</li>
+                            <li><i class="fas fa-tools"></i> Optimisé (pas de lag)</li>
+                            <li><i class="fab fa-youtube" style="color: #ff0000;"></i> <a href="LIEN_YOUTUBE_ICI" target="_blank" style="color: inherit; text-decoration: none;">Voir la vidéo</a></li>
+                        </ul>
+                        
+                        <button class="order-btn" style="width: 100%; margin-top: 20px;" onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')">COMMANDER</button>
+                    </div>
+                </div>
+                -->
+
+            <!-- MODÈLE SCRIPT (À COPIER) -->
+            <!--
+                <div class="project-item pricing-card" data-category="script" style="padding: 0; padding-bottom: 20px; display: none;">
+                    <div class="project-thumb" style="background-image: url('URL_DE_VOTRE_IMAGE_ICI'); height: 200px;"></div>
+                    
+                    <div style="padding: 0 20px;">
+                        <div class="pricing-header" style="border-bottom: none; padding-bottom: 0;">
+                            <span class="badge badge-blue project-cat">SCRIPT ESX/QB</span>
+                            <h3 class="project-title">NOM DU SCRIPT</h3>
+                            <div class="price">20€</div>
+                            <span style="color: #999; font-size: 0.9rem;">OPEN SOURCE / ESCROW</span>
+                        </div>
+                        
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-code"></i> Framework : ESX / QBCORE</li>
+                            <li><i class="fas fa-server"></i> Optimisation : 0.00ms</li>
+                            <li><i class="fas fa-cogs"></i> Configurable à 100%</li>
+                            <li><i class="fab fa-youtube" style="color: #ff0000;"></i> <a href="LIEN_YOUTUBE_ICI" target="_blank" style="color: inherit; text-decoration: none;">Voir le showcase</a></li>
+                        </ul>
+                        
+                        <button class="order-btn" style="width: 100%; margin-top: 20px;" onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')">COMMANDER</button>
+                    </div>
+                </div>
+                -->
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process-section">
+            <div class="section-title">
+                <h2>PROCESSUS DE COMMANDE</h2>
+                <div class="line"></div>
+                <p style="margin-top: 15px; color: var(--text-muted); text-align: center;">Simple, transparent et
+                    sécurisé</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>1. PRISE DE CONTACT</h3>
+                        <p>Tout commence par un ticket sur notre Discord. Expliquez-nous votre besoin (script,
+                            mapping,
+                            vidéo...).</p>
+                    </div>
+                    <div class="timeline-number">1</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <h3>2. DEVIS & VALIDATION</h3>
+                        <p>Nous étudions votre demande et vous proposons un devis détaillé avec un délai de
+                            réalisation.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>3. PAIEMENT SÉCURISÉ</h3>
+                        <p>Le paiement s'effectue avant le début de la production pour valider la commande.
+                        <div class="payment-warning">
+                            <strong>IMPORTANT :</strong><br>
+                            PayPal ou Revolut uniquement.<br>
+                            Envoi en mode "Entre Proches" (Friends & Family) obligatoire.
+                        </div>
+                        <div class="payment-icons">
+                            <i class="fab fa-paypal"></i>
+                            <i class="fas fa-university"></i>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="timeline-number">3</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-content">
+                        <h3>4. PRODUCTION & LIVRAISON</h3>
+                        <p>Nous réalisons votre commande et vous tenons informé de l'avancée. Livraison finale via
+                            lien
+                            sécurisé.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <div class="section-title">
+                <h2>L'ÉQUIPE STUDIO</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="team-grid">
+                <!-- Babouche Card -->
+                <div class="team-card">
+                    <div class="team-header">
+                        <div class="team-avatar" style="background-image: url('babouche.png');"></div>
+                    </div>
+                    <div class="team-body">
+                        <div class="team-role">OWNER & DÉVELOPPEUR</div>
+                        <h3 class="team-name">BABOUCHE</h3>
+                        <p class="team-bio">Responsable du pôle Technique. Expert en développement FiveM (Lua),
+                            création
+                            de
+                            sites web et solutions infrastructure.</p>
+                        <div class="team-socials">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Taxou Card -->
+                <div class="team-card">
+                    <div class="team-header">
+                        <div class="team-avatar" style="background-image: url('taxou.jpg');"></div>
+                    </div>
+                    <div class="team-body">
+                        <div class="team-role">OWNER & DIRECTEUR ARTISTIQUE</div>
+                        <h3 class="team-name">TAXOU</h3>
+                        <p class="team-bio">Responsable du pôle Créatif. Maître du Rockstar Editor, voix off
+                            professionnelle,
+                            montage vidéo et graphisme.</p>
+                        <div class="team-socials">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="partners" class="services-section" style="background: var(--bg-color);">
+            <div class="section-title">
+                <h2>NOS PARTENAIRES & OUTILS</h2>
+                <div class="line"></div>
+            </div>
+
+            <!-- Partners -->
+            <div class="partners-grid" style="display: flex; justify-content: center; gap: 40px; margin-bottom: 80px;">
+                <div class="partner-card" onclick="window.open('https://discord.gg/mywU9KUYWY', '_blank')"
+                    style="text-align: center; opacity: 0.8; transition: opacity 0.3s; cursor: pointer;"
+                    onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'">
+                    <i class="fas fa-server" style="font-size: 4rem; color: #fff; margin-bottom: 15px;"></i>
+                    <h3 style="color: #fff; font-size: 1.4rem; font-family: var(--font-heading); letter-spacing: 1px;">
+                        IMPACT RÔLEPLAY</h3>
+                </div>
+            </div>
+
+            <!-- Arsenal Title (Optional sub-header) -->
+            <div class="section-title" style="margin-bottom: 40px;">
+                <h3
+                    style="color: var(--accent-color); font-family: var(--font-heading); font-size: 2rem; text-transform: uppercase;">
+                    Notre Arsenal Technologique</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Maîtrise des meilleurs logiciels pour des
+                    résultats exceptionnels</p>
+            </div>
+
+            <!-- New Arsenal Grid -->
+            <div class="arsenal-grid">
+                <div class="tool-card">
+                    <i class="fas fa-code" style="color: #007ACC;"></i>
+                    <span>VS Code</span>
+                </div>
+                <div class="tool-card">
+                    <i class="fas fa-cube" style="color: #e87d0d;"></i>
+                    <span>Blender</span>
+                </div>
+                <div class="tool-card">
+                    <i class="fas fa-paint-brush" style="color: #31A8FF;"></i>
+                    <span>Photoshop</span>
+                </div>
+                <div class="tool-card">
+                    <i class="fas fa-film" style="color: #9999FF;"></i>
+                    <span>Premiere Pro</span>
+                </div>
+                <div class="tool-card">
+                    <i class="fas fa-video" style="color: #FF0000;"></i>
+                    <span>Rockstar Editor</span>
+                </div>
+                <div class="tool-card">
+                    <i class="fas fa-gamepad" style="color: #FCA311;"></i>
+                    <span>FiveM</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2>TAX & BAB</h2>
+                <p>Votre partenaire créatif pour l'univers FiveM et au-delà.</p>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px; color: #555; font-size: 0.8rem;">
+            &copy; 2026 Tax & Bab Studio. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sytème Police Avancé - TAX & BAB Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container" onclick="window.location.href='index.html'" style="cursor: pointer;">
+            <img src="logo.png" alt="TAX & BAB Logo" class="logo-img">
+            <span class="brand-name">TAX & BAB</span>
+        </div>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#portfolio">Nos Créations</a>
+        </nav>
+        <button class="auth-btn" onclick="window.open('https://discord.gg/votre_lien', '_blank')">
+            <i class="fab fa-discord"></i> REJOINDRE
+        </button>
+    </header>
+
+    <main class="product-page">
+        <div class="product-container">
+            <a href="index.html#portfolio" class="back-link"><i class="fas fa-arrow-left"></i> Retour aux
+                réalisations</a>
+
+            <div class="product-layout">
+                <div class="product-gallery">
+                    <div class="main-image" style="background-image: url('https://picsum.photos/800/600?random=10');">
+                    </div>
+                    <div class="image-thumbnails">
+                        <div class="thumb active"
+                            style="background-image: url('https://picsum.photos/800/600?random=10');"></div>
+                        <div class="thumb" style="background-image: url('https://picsum.photos/800/600?random=20');">
+                        </div>
+                        <div class="thumb" style="background-image: url('https://picsum.photos/800/600?random=30');">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <span class="product-tag">SCRIPT LUA</span>
+                    <h1>SYSTÈME POLICE AVANCÉ</h1>
+                    <div class="price-tag">45.00 €</div>
+
+                    <div class="product-description">
+                        <h3>Description</h3>
+                        <p>Ce script de police complet transforme l'expérience des forces de l'ordre sur votre serveur
+                            FiveM. Optimisé (0.01ms), il inclut une gestion complète des preuves, des casiers
+                            judiciaires interactifs, et un système de dispatch avancé.</p>
+
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> Compatible ESX & QB-Core</li>
+                            <li><i class="fas fa-check"></i> Interface utilisateur (UI) moderne en React</li>
+                            <li><i class="fas fa-check"></i> Système de preuves (ballistique, ADN)</li>
+                            <li><i class="fas fa-check"></i> Tablette MDT intégrée</li>
+                            <li><i class="fas fa-check"></i> Support prioritaire 7j/7</li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-used">
+                        <span><i class="fas fa-code"></i> Lua</span>
+                        <span><i class="fab fa-react"></i> React</span>
+                        <span><i class="fas fa-database"></i> SQL</span>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="order-btn" onclick="window.open('https://discord.gg/votre_lien', '_blank')">
+                            <i class="fab fa-discord"></i> COMMANDER (TICKET)
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2>TAX & BAB</h2>
+                <p>Votre partenaire créatif pour l'univers FiveM et au-delà.</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px; color: #555; font-size: 0.8rem;">
+            &copy; 2026 Tax & Bab Studio. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Simple Thumbnail Switcher
+        document.querySelectorAll('.thumb').forEach(thumb => {
+            thumb.addEventListener('click', function () {
+                const bg = this.style.backgroundImage;
+                document.querySelector('.main-image').style.backgroundImage = bg;
+                document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
