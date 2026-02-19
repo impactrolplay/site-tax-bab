@@ -1,6 +1,6 @@
-# FS-DEVELOPMENT Website
+# Bab Studio Website
 
-Ce site a été créé selon vos spécifications pour FS-DEVELOPMENT. Il utilise HTML, CSS et JavaScript pur (Vanilla) pour une performance maximale et une modification facile.
+Ce site a été créé selon vos spécifications pour Bab Studio. Il utilise HTML, CSS et JavaScript pur (Vanilla) pour une performance maximale et une modification facile.
 
 ## Structure du projet
 
@@ -32,3 +32,4 @@ Pour lier votre Discord ou d'autres pages, modifiez les attributs `href="#"` dan
 - JavaScript (DOM Manipulation, Intersection Observer)
 - FontAwesome (Icônes)
 - Google Fonts (Inter, Anton)
+
